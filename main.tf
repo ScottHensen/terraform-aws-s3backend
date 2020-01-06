@@ -10,8 +10,10 @@ resource "aws_resourcegroups_group" "resourcegroups_group" {
                 "AWS::AllSupported"
             ],
             "TagFilters" : [
-                "Key" : "ResourceGroup",
-                "Values" : ["${var.namespace}"]
+                {
+                    "Key" : "ResourceGroup",
+                    "Values" : ["${var.namespace}"]
+                }
             ]
         }
         JSON
